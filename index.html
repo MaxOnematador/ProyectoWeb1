@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+
+
+    <form id="registroForm">
+        <h2>Formulario de Registro</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$" title="Solo letras y espacios">
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" required pattern="\d{10}" title="Debe tener exactamente 10 números">
+        
+        <label for="Contraseña">Contraseña</label>
+        <input type="password" id="Contraseña" name="Contraseña">
+
+        <input type="submit" value="Registrarse">
+    </form>
+
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío automático
+            
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            
+            const nombreValido = /^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$/.test(nombre);
+            const telefonoValido = /^\d{10}$/.test(telefono);
+            
+            if (!nombreValido) {
+                alert('El nombre solo puede contener letras y espacios.');
+                return;
+            }
+            if (!telefonoValido) {
+                alert('El teléfono debe contener exactamente 10 números.');
+                return;
+            }
+            
+            // Redirigir a la página principal después de un registro exitoso
+            window.location.href = 'PaginaPrincipal.html';
+        });
+    </script>
+</body>
+</html>
