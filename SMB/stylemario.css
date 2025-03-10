@@ -1,0 +1,65 @@
+
+
+body {
+    background-color: #5c94fc; /* Azul del cielo en Super Mario Bros */
+    color: black;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    background-color: #ffcc00; /* Amarillo de los bloques misteriosos */
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #d35400; /* Naranja para bordes */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #d32f2f; /* Rojo de Mario */
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2d2d2d;
+    background-color: #ffcc00;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 3px solid #d35400;
+}
+
+a:hover {
+    background-color: #ffa500;
+    color: black;
+}
+
+img, video {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 5px solid #d32f2f;
+    box-shadow: 0 0 10px white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e74c3c;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
